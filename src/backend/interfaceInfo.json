@@ -1,0 +1,4 @@
+{
+    "buttons": ["Good", "Neutral", "Bad"],
+    "message": "There is no feedback"
+}
