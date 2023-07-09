@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import css from "./Statistics.module.css";
 
 export const Statistics = ({ state, buttons, total, positivePercentage }) => {
+    const pct = positivePercentage();
+    
     return (
-        <ul className="stats-container">
+        <ul className={css.statsContainer}>
             {buttons.map((item, index) => (
                 <li key={index}>
                     <p>
@@ -17,7 +20,25 @@ export const Statistics = ({ state, buttons, total, positivePercentage }) => {
             </li>
             <li>
                 <p>
-                    Positive feedback: {positivePercentage()}%
+                    Positive feedback: {pct}%
+                    {" "}
+                    {
+                        pct >= 80
+                            ?
+                            '🤩'
+                            :
+                            (pct >= 50
+                                ?
+                                '😏'
+                                :
+                                (pct >= 20
+                                    ?
+                                    '😐'
+                                    :
+                                    '🗿🗿🗿'
+                                )
+                            )
+                    }
                 </p>
             </li>
         </ul>
