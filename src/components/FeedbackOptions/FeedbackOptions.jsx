@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-// import { Button } from "../Button/Button";
 
-export const ButtonGroup = ({ buttons, update }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
         <>
             <ul className="buttons">
                 {
-                    buttons.map((item, index) => (
+                    options.map((item, index) => (
                         <li key={index}>
-                            <button type="button" onClick={update}>
+                            <button type="button" onClick={onLeaveFeedback}>
                                 {item}
                             </button>
                         </li>
@@ -19,7 +18,7 @@ export const ButtonGroup = ({ buttons, update }) => {
     );
 };
 
-ButtonGroup.propTypes = {
-    buttons: PropTypes.array.isRequired,
-    update: PropTypes.func.isRequired,
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
 };

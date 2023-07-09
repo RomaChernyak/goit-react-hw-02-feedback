@@ -1,4 +1,6 @@
 {
+    "headerBtn": "Please leave feedback",
+    "headerStat": "Statistics",
     "buttons": ["Good", "Neutral", "Bad"],
     "message": "There is no feedback"
 }

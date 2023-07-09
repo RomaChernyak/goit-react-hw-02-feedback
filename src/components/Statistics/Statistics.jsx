@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-export const StatsFigures = ({ state, buttons, total, share }) => {
+export const Statistics = ({ state, buttons, total, positivePercentage }) => {
     return (
-        <ul>
+        <ul className="stats-container">
             {buttons.map((item, index) => (
                 <li key={index}>
                     <p>
@@ -17,16 +17,16 @@ export const StatsFigures = ({ state, buttons, total, share }) => {
             </li>
             <li>
                 <p>
-                    Positive feedback: {share()}%
+                    Positive feedback: {positivePercentage()}%
                 </p>
             </li>
         </ul>
     );
 };
 
-StatsFigures.propTypes = {
-    state: PropTypes.object.isRequired,
-    buttons: PropTypes.array.isRequired,
-    total: PropTypes.func.isRequired,
-    share: PropTypes.func.isRequired,
+Statistics.propTypes = {
+    state: PropTypes.object,
+    buttons: PropTypes.array,
+    total: PropTypes.func,
+    positivePercentage: PropTypes.func,
 };

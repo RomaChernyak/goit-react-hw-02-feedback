@@ -1,1 +1,0 @@
-export { StatsFigures } from "./StatsFigures";

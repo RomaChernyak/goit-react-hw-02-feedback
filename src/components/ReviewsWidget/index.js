@@ -1,1 +1,0 @@
-export { ReviewsWidget } from "./ReviewsWidget";
