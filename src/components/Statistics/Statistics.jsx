@@ -4,6 +4,24 @@ import css from "./Statistics.module.css";
 export const Statistics = ({ state, buttons, total, positivePercentage }) => {
     const pct = positivePercentage();
     
+    const addEmoji = (pct) => {
+        return (pct >= 80
+            ?
+            '🤩'
+            :
+            (pct >= 50
+                ?
+                '😏'
+                :
+                (pct >= 20
+                    ?
+                    '😐'
+                    :
+                    '🗿🗿🗿'
+                )
+            ))
+    };
+
     return (
         <ul className={css.statsContainer}>
             {buttons.map((item, index) => (
@@ -23,21 +41,7 @@ export const Statistics = ({ state, buttons, total, positivePercentage }) => {
                     Positive feedback: {pct}%
                     {" "}
                     {
-                        pct >= 80
-                            ?
-                            '🤩'
-                            :
-                            (pct >= 50
-                                ?
-                                '😏'
-                                :
-                                (pct >= 20
-                                    ?
-                                    '😐'
-                                    :
-                                    '🗿🗿🗿'
-                                )
-                            )
+                        addEmoji(pct)
                     }
                 </p>
             </li>
