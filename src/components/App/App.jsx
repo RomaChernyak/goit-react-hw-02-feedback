@@ -70,9 +70,3 @@ export class App extends Component {
     );
   }
 };
-
-// data={interfaceInfo}
-// update={this.handleUpdate}
-// state={this.state}
-// total={this.countTotalFeedback}
-// positivePercentage={this.countPositiveFeedbackPercentage}
