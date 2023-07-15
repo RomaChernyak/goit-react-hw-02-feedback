@@ -50,8 +50,8 @@ export const Statistics = ({ state, buttons, total, positivePercentage }) => {
 };
 
 Statistics.propTypes = {
-    state: PropTypes.object,
-    buttons: PropTypes.array,
+    state: PropTypes.objectOf(PropTypes.number),
+    buttons: PropTypes.arrayOf(PropTypes.string),
     total: PropTypes.func,
     positivePercentage: PropTypes.func,
 };
